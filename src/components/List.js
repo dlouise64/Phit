@@ -19,14 +19,13 @@ const Markers = styled.ul`
 	justify-content: center;
 `
 const Marker = styled.li`
-	position: relative;
 	width: 6%;
 	height: 0;
 	padding: 3% 0;
 	margin: 0 auto;
 	border-radius: 50%;
 	background: #a7cd80;
-	border: 10px solid #97b974;
+	border: 0.095em solid #97b974;
 	display: flex;
 	justify-content: center;
 	font-size: 3em;
