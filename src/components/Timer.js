@@ -6,6 +6,7 @@ export default function Timer() {
 	let { timer, start } = useContext(DataContext)
 	let [count, setCount] = useState(timer)
 	let [rounds] = useState([])
+
 	useInterval(() => {
 		if (start) {
 			setCount(count - 1)
