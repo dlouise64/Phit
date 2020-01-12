@@ -1,13 +1,20 @@
-import React from 'react'
-import logo from './logo.svg'
+import React, { useState, createContext } from 'react'
+
 import './App.css'
 import List from './components/List'
+import Timer from './components/Timer'
 
+export const DataContext = createContext([])
 function App() {
+	let [data, setData] = useState({ timer: 10, start: false })
 	return (
-		<div>
+		<>
+			<button onClick={() => setData({ timer: 10, start: true })}>Start</button>
 			<List />
-		</div>
+			<DataContext.Provider value={data}>
+				<Timer />
+			</DataContext.Provider>
+		</>
 	)
 }
 
