@@ -3,7 +3,7 @@ import useInterval from '../hooks/useInterval'
 import { DataContext } from '../App'
 
 export default function Timer() {
-	let { timer, start } = useContext(DataContext)
+	let { timer, start, interval } = useContext(DataContext)
 	let [count, setCount] = useState(timer)
 	let [rounds] = useState([])
 
@@ -15,7 +15,7 @@ export default function Timer() {
 				rounds.push(rounds.length + 1)
 			}
 		}
-	}, 1000)
+	}, interval)
 
 	return (
 		<div>

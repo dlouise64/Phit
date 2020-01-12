@@ -6,10 +6,10 @@ import Timer from './components/Timer'
 
 export const DataContext = createContext([])
 function App() {
-	let [data, setData] = useState({ timer: 10, start: false })
+	let [data, setData] = useState({ timer: 10, start: false, interval: 1000 })
 	return (
 		<>
-			<button onClick={() => setData({ timer: 10, start: true })}>Start</button>
+			<button onClick={() => setData({ ...data, start: true })}>Start</button>
 			<List />
 			<DataContext.Provider value={data}>
 				<Timer />
